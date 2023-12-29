@@ -1,3 +1,7 @@
+:root {
+  --tranlate-unit: translateX(-50%)
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +16,67 @@ html {
 
 body {
   height: 100%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section {
+  border: 1px solid #000;
+  width: 60rem;
+  height: 35rem;
+}
+
+section.img-wrapper {
+  overflow: hidden; 
+  background: url('https://picsum.photos/620/370');
+}
+
+section.tab-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+section.tab {
+  background-color: #eee;
+  width: 60rem;
+  height: 30rem;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+}
+
+h2.tab-heading {
+  margin: 2.5rem auto;
+}
+
+p.lorem {
+  font-size: 1.2em;
+}
+
+a.title-tab {
+  display: block;
+  width: 20rem;
+  height: 5rem;
+  background-color: #cec;
+  text-decoration: none;
+  position: absolute;
+  border: 1px solid #000;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+a#title-one {
+  left: 0;
+}
+
+a#title-two {
+  left: 50%;
+  transform: translate(-50%)
+}
+
+a#title-three {
+  right: 0;
 }
