@@ -2,6 +2,12 @@
   --tranlate-unit: translateX(-50%)
 }
 
+/* Utility Classes */
+.active {
+  z-index: 2;
+}
+/* Utility Classes */
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +51,7 @@ section.tab {
   position: absolute;
   bottom: 0;
   padding: 2rem;
+  border-top: none;
 }
 
 h2.tab-heading {
@@ -61,22 +68,18 @@ a.title-tab {
   height: 5rem;
   background-color: #cec;
   text-decoration: none;
-  position: absolute;
-  border: 1px solid #000;
   font-size: 1.5em;
   text-align: center;
   padding: 1rem 3rem;
+  border-bottom: none;
 }
 
-a#title-one {
-  left: 0;
+a.title-tab.active {
+  background-color: #eee;
 }
 
-a#title-two {
-  left: 50%;
-  transform: translate(-50%)
+section.tabs-name {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-a#title-three {
-  right: 0;
-}

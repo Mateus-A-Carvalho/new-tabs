@@ -1,14 +1,23 @@
-const tabTitleListEl = document.querySelectorAll('.title-tab');
-const sectionTabListEl = document.querySelectorAll('.tab');
+const tabsEl = document.querySelector('#tabs-name');
+const tabsBtnEl = document.querySelectorAll('.title-tab');
+const tabsContent = document.querySelectorAll('.tab');
 
-tabTitleListEl.forEach(anchorElement => {
-  const idTabTitle = anchorElement.getAttribute("data-tab"); // Catching elements with data-tab attribute
-  const tabSelected = document.querySelector(`.${idTabTitle}`); // Catching elements that has the same class of data-tab;
+tabsEl.addEventListener("click", (e) => {
+  const id = e.target.dataset.id;
+  
+  if(id) { 
+    tabsBtnEl.forEach(btns => { 
+      btns.classList.remove('active');
+    }) 
 
-  anchorElement.addEventListener('click', (e) => {
-    let clickedElement = e.target;
-    if(clickedElement.hasAttribute('data-tab')) {
-      console.log(clickedElement);
-    }
+  e.target.classList.add('active') 
+
+  tabsContent.forEach(content => {
+    content.classList.remove('active')
   })
+
+  const contentElement = document.getElementById(id);
+  contentElement.classList.add('active');
+
+  }
 })
