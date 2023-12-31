@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 :root {
   --tranlate-unit: translateX(-50%)
 }
@@ -26,22 +28,32 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: url('../img/Circuit\ Primary.svg');
+  background-position: center center;
+  background-size: cover;
 }
 
 section {
-  border: 1px solid #000;
   width: 60rem;
   height: 35rem;
+  
 }
 
 section.img-wrapper {
   overflow: hidden; 
-  background: url('https://picsum.photos/620/370');
+  background: white url('../img/front-end.jpg');
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1rem;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
 }
 
 section.tab-wrapper {
   position: relative;
   overflow: hidden;
+  border-radius: 1rem 1rem;
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
+  font-family: raleway, 'sans-serif';
 }
 
 section.tab {
@@ -55,7 +67,7 @@ section.tab {
 }
 
 h2.tab-heading {
-  margin: 2.5rem auto;
+  margin: 0 auto 1rem auto;
 }
 
 p.lorem {
@@ -66,12 +78,18 @@ a.title-tab {
   display: block;
   width: 20rem;
   height: 5rem;
-  background-color: #cec;
+  background-color: rgb(115, 221, 115);
   text-decoration: none;
+  color: #2b2b2b;
   font-size: 1.5em;
   text-align: center;
   padding: 1rem 3rem;
   border-bottom: none;
+  transition: all .3s;
+}
+
+a.title-tab:hover {
+  background-color: rgb(17, 72, 190);
 }
 
 a.title-tab.active {
